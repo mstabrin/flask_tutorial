@@ -1,5 +1,5 @@
-from flask import render_template, flash, redirect, url_for
-from flask_login import current_user, login_user, login_required
+from flask import render_template, flash, redirect, url_for, request
+from flask_login import current_user, login_user, login_required, logout_user
 from . import app
 from .forms import LoginForm
 from .models import User
@@ -34,6 +34,7 @@ def login():
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
+
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
