@@ -3,6 +3,7 @@ from flask_login import current_user, login_user, login_required, logout_user
 from . import app, db
 from .forms import LoginForm, RegistrationForm
 from .models import User
+from werkzeug.urls import url_parse
 
 
 @app.route('/')
