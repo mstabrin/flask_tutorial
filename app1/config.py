@@ -16,3 +16,5 @@ class Config(object):
     ADMINS = ['markus.stabrin@mpi-dortmund.mpg.de']
 
     POSTS_PER_PAGE = 3
+
+    LANGUAGES = ['en', 'de']

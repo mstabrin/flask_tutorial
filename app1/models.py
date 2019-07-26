@@ -1,6 +1,7 @@
 from time import time
 import jwt
 from flask_login import UserMixin
+from flask_babel import lazy_gettext as _l, _
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from . import db
@@ -36,7 +37,7 @@ class User(UserMixin, db.Model):
         )
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return _('<User %(username)s>', username=self.username)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -94,7 +95,7 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Post {}>'.format(self.body)
+        return _('<Post %(body)s>', body=self.body)
 
 
 @login.user_loader
