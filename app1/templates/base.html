@@ -48,6 +48,14 @@
                     <li><a href="{{ url_for('user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
                     <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
                     {% endif %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{ _('Language') }}
+                      <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="{{ url_for('lang', language='en') }}">EN</a></li>
+                        <li><a href="{{ url_for('lang', language='de') }}">DE</a></li>
+                      </ul>
+                    </li>
                 </ul>
             </div>
         </div>

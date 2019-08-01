@@ -145,6 +145,15 @@ def follow(username):
     return redirect(url_for('user', username=username))
 
 
+@app.route('/lang/<language>')
+def lang(language):
+    if language in app.config['LANGUAGES']:
+        app.config['LOCALE'] = language
+    else:
+        flash(_('Language not known!'))
+    return redirect(request.referrer)
+
+
 @app.route('/unfollow/<username>')
 @login_required
 def unfollow(username):

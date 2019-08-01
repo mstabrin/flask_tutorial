@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-01 05:45+0200\n"
+"POT-Creation-Date: 2019-08-01 06:32+0200\n"
 "PO-Revision-Date: 2019-07-26 01:32+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -104,7 +104,7 @@ msgstr "Herzlichen Glueckwunsch, du bist jetzt ein registrierter Benutzer!"
 msgid "Your changes habe been saved."
 msgstr "Deine Aenderungen wurden gespeichert."
 
-#: app1/routes.py:137 app1/routes.py:153
+#: app1/routes.py:137 app1/routes.py:164
 #, python-format
 msgid "User %(username)s not found."
 msgstr "User %(username)s not found."
@@ -118,20 +118,24 @@ msgstr "Du kannst dir nicht selber folgen!"
 msgid "You are following %(username)s!"
 msgstr "Du folgst jetzt $(username)s!"
 
-#: app1/routes.py:156
+#: app1/routes.py:153
+msgid "Language not known!"
+msgstr "Sprache nicht bekannt!"
+
+#: app1/routes.py:167
 msgid "You cannot unfollow yourself!"
 msgstr "Du musst dir selbst folgen :)"
 
-#: app1/routes.py:160
+#: app1/routes.py:171
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Du folgst jetzt $(username)s."
 
-#: app1/routes.py:195
+#: app1/routes.py:206
 msgid "Check your email for the instructions to reset your password"
 msgstr "Ueberpruefe deine emails um dein Passwort zuruckzusetzen"
 
-#: app1/routes.py:211
+#: app1/routes.py:222
 msgid "Your password has been reset."
 msgstr "Dein Passwort wurde zurueckgesetzt."
 
@@ -197,6 +201,10 @@ msgstr "Profil"
 #: app1/templates/base.html:49
 msgid "Logout"
 msgstr "Ausloggen"
+
+#: app1/templates/base.html:52
+msgid "Language"
+msgstr "Sprache"
 
 #: app1/templates/edit_profile.html:5
 msgid "Edit Profile"
