@@ -67,5 +67,5 @@ from . import routes, models, errors
 
 @babel.localeselector
 def get_locale():
-    return 'de'
+    #return 'de'
     return request.accept_languages.best_match(app.config['LANGUAGES'])
