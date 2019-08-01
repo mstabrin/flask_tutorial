@@ -168,7 +168,7 @@ msgstr ""
 #: app1/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
-msgstr "%(username)s sagt %(when)s"
+msgstr "%(username)s sagte %(when)s"
 
 #: app1/templates/_post.html:24
 msgid "Translate"
